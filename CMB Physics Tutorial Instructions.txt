@@ -1,0 +1,22 @@
+﻿CMB Physics Tutorial Instructions
+
+
+You can deactivate Conda using: conda deactivate
+1.Installing Healpy: 
+You would require Linux/Mac OS X platforms. Windows users can install WSL. 
+Without Conda: pip install healpy
+With Conda: conda config --add channels conda-forge conda                          install healpy
+2.Installing CAMB:
+First install gfortran using: sudo apt-get install gfortran
+Without Conda: pip install camb
+With Conda:         conda create -n camb -c conda-forge python=3.11 camb activate camb
+3.Installing Hyrec:
+git clone https://github.com/nanoomlee/HYREC-2.git
+cd Hyrec 
+mkdir build
+cd build 
+cmake ..
+Go back to the HYREC-2 folder 
+make
+To run hyrec, use: ./hyrec
+This will create an output file named output_xe.dat
